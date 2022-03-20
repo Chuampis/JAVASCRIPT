@@ -115,13 +115,8 @@
                         </a>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cantidad-prod">
-                                0
-                            </span>
-                        </button>
+                        <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -131,35 +126,31 @@
 
     <!-- INICIO MAIN -->
     <main>
-        <!-- Section-->
-        <!-- BUSCADOR DE PRODUCTOS -->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
+        <h1>
+            Tienda
+        </h1>
+<section class="listado-productos px-4 px-lg-5 mt-5">
+
+    <!-- BUSCADOR DE PRODUCTOS -->
     <div id="productSearch" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center mb-2">
         <h2>Busca tu producto!</h2>
         <input type="text" id="buscaProductos" class="form-control mb-2">
         <button class="btn btn-info mb-2" id="boton">Buscar</button>
     </div>
-</div>
-</section>
     <div>
         <ul id="resultado" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
         </ul>
     </div>
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div id="listado-productos" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                </div>
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-<form action="#">
-    <input type="text" id="usuario" oninput="userName(event)">
-    <input type="password" id="password" oninput="password(event)">
-</form>
+
+    <!-- LISTADO DE PRODUCTOS -->
+    <div id="productos" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="productos">
+    
+        </div>
+    </div>
 </section>
-</div>
+
+
     </main>
     <!-- FIN MAIN -->
 
