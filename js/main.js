@@ -13,18 +13,13 @@ const productos = [
     { id: 9, categoria: 'Accesorios Calzado', nombre: 'Plantillas Ortopedicas', precio: 220, stock: 80, img: "/assets/images/plantillas/plantillas__03.jpg" },
 ];
 
+
+// AGREGAR AL CARRITO
 const addToCart = (idProducto) => {
-    const unidades = document.getElementById(
-        `cantidad-${idProducto}`
-    ).value;
-        console.log(unidades);
-    
     const productoAgregado = productos.find(producto => producto.id === idProducto);
-    productoAgregado.cantidad = unidades;
-
     carrito.push(productoAgregado);
-    document.getElementById("cantidad-prod").innerHTML = "$"+productoAgregado.precio * productoAgregado.cantidad;
-
+    document.getElementById("cantidad-prod").innerHTML = carrito.length;
+    console.log(carrito);
 };
 
 
@@ -59,7 +54,7 @@ function generarCards(productosAMostrar){
                     <button 
                         onclick="addToCart(${elementoDelArray.id})"
                         class="btn btn-outline-dark mt-auto" href="#">
-                        Add to cart
+                        Agregar
                     </button>
                 </div>
             </div>
@@ -73,7 +68,7 @@ function mostrarCards(cards) {
     document.getElementById("listado-productos").innerHTML = cards;
 };
 
-// LOGIN
+// LOGIN //
 function userName(event){
     event.target.style.backgroundColor = '#dfc8a5';
     const valorDelInput = event.target.value;
